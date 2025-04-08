@@ -135,15 +135,8 @@ const Login: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="flex-1 flex flex-col items-start justify-end pt-[37.437rem] px-[1rem] pb-[1.5rem] box-border relative gap-[2rem] min-w-[28.625rem] max-w-full text-[2rem] font-text-sm-normal">
-        <Image
-          className="w-full h-full absolute !m-[0] top-[0rem] right-[0rem] bottom-[0rem] left-[0rem] rounded-xl max-w-full overflow-hidden max-h-full object-cover"
-          loading="lazy"
-          width={704}
-          height={976}
-          alt=""
-          src="/image@2x.png"
-        />
+      <div className="h-full flex flex-col  justify-center  px-[1rem]  box-border relative gap-[2rem] min-w-[28.625rem] max-w-full text-[2rem] font-text-sm-normal">
+  <Slider/>
    
       </div>
     </div>

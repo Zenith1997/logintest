@@ -10,7 +10,10 @@
   height: 300px;
   max-height: 100vh;
 }
-
+slides{
+  display: flex;
+  position: relative;
+}
 .number-slide1 {
   background: rgb(64, 175, 255);
   background: linear-gradient(
@@ -76,17 +79,22 @@
   height: 100vh;
 }
 .dots {
-  display: flex;
-  padding: 10px 0;
+  position: absolute;
+ 
+  left: 100px;
+  
+  bottom:-132px;
+  border-radius: 50px;
   justify-content: center;
-  gap: 8px; /* spacing between lines */
+  gap: 14px; /* spacing between lines */
 }
 
 .dot {
-  border: none;
-  width: 30px; /* width of the line */
+  padding: 4px;;
+ margin: 4px;
+  width: 10vw; /* width of the line */
   height: 4px; /* height of the line */
-  background: #c5c5c5;
+  background: #dbdbdbf1;
   border-radius: 2px;
   cursor: pointer;
   transition: background 0.3s ease;
@@ -97,7 +105,7 @@
 }
 
 .dot.active {
-  background: #000; /* active line color */
+  background: #6843ec; /* active line color */
 }
 
 .arrow {

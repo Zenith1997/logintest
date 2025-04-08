@@ -20,7 +20,7 @@ export default function App() {
   return (
     <>
 
-<div ref={sliderRef} className="keen-slider h-screen">
+<div ref={sliderRef} className="keen-slider h-screen slides">
   <div className="keen-slider__slide h-full">
     <Slides />
   </div>
@@ -37,31 +37,8 @@ export default function App() {
     6
   </div>
 </div>
-
-        {loaded && instanceRef.current && (
-          <>
-            <Arrow
-              left
-              onClick={(e: any) =>
-                e.stopPropagation() || instanceRef.current?.prev()
-              }
-              disabled={currentSlide === 0}
-            />
-
-            <Arrow
-              onClick={(e: any) =>
-                e.stopPropagation() || instanceRef.current?.next()
-              }
-              disabled={
-                currentSlide ===
-                instanceRef.current.track.details.slides.length - 1
-              }
-            />
-          </>
-        )}
-      
-      {loaded && instanceRef.current && (
-        <div className="dots">
+ {loaded && instanceRef.current && (
+        <div className="dots -translate-y-40 ">
           {[
             ...Array(instanceRef.current.track.details.slides.length).keys(),
           ].map((idx) => {
@@ -77,6 +54,9 @@ export default function App() {
           })}
         </div>
       )}
+  
+      
+     
     </>
   )
 }
