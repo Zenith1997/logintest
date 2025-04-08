@@ -3,8 +3,8 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
-import { Eye, EyeClosed, EyeOff } from "lucide-react";
-
+import { Eye, EyeClosed, EyeOff, Sliders } from "lucide-react";
+import Slider from '../components/carousal/Slider'
 
 const Login: NextPage = () => {
 
