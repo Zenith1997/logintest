@@ -20,7 +20,7 @@ export default function App() {
   return (
     <>
 
-<div ref={sliderRef} className="keen-slider h-screen slides">
+<div ref={sliderRef} className="keen-slider h-screen ">
   <div className="keen-slider__slide h-full">
     <Slides />
   </div>
@@ -33,9 +33,9 @@ export default function App() {
   <div className="keen-slider__slide h-full">
     <Slides />
   </div>
-  
-</div>
- {loaded && instanceRef.current && (
+
+
+  {loaded && instanceRef.current && (
         <div className="dots -translate-y-40 ">
           {[
             ...Array(instanceRef.current.track.details.slides.length).keys(),
@@ -52,6 +52,8 @@ export default function App() {
           })}
         </div>
       )}
+</div>
+
   
       
      

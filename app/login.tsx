@@ -116,7 +116,7 @@ const Login: NextPage = () => {
       </div>
 
       {/* Right Pane with Slider */}
-      <div className="w-full lg:w-[50%] flex items-center justify-center px-4 py-6 bg-white">
+      <div className="w-full lg:w-[50vw] flex items-center justify-center px-4 py-6 bg-white">
         <Slider />
       </div>
     </div>

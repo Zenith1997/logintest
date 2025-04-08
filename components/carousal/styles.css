@@ -1,19 +1,22 @@
 [class^="number-slide"],
 [class*=" number-slide"] {
-  background: grey;
+  background: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 3.125rem; /* 50px */
-  color: #fff;
+  color: #000000;
   font-weight: 500;
   height: 18.75rem; /* 300px */
   max-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 slides {
   display: flex;
   position: relative;
+  justify-content: center;
 }
 
 .number-slide1 {
@@ -71,21 +74,23 @@ slides {
 }
 
 .dots {
+  display:flex;
   position: absolute;
-  left: 6.25rem; /* 100px */
-  bottom: -8.25rem; /* -132px */
+  left: 8.25rem; /* 100px */
+  bottom: -7.25rem; /* -132px */
   border-radius: 3.125rem; /* 50px */
   justify-content: center;
-  gap: 0.875rem; /* 14px */
+  gap: 0.001rem; /* 14px */
+
 }
 
 .dot {
   padding: 0.25rem; /* 4px */
   margin: 0.25rem; /* 4px */
-  width: 6.875rem; /* 110px */
-  height: 0.25rem; /* 4px */
+  width: 4.875rem; /* 110px */
+  height: 0.10rem; /* 4px */
   background: #dbdbdbf1;
-  border-radius: 0.125rem; /* 2px */
+  border-radius: 4.125rem; /* 2px */
   cursor: pointer;
   transition: background 0.3s ease;
 }
