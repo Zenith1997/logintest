@@ -12,14 +12,12 @@ const Login: NextPage = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   return (
-    <div className="w-full min-h-screen flex flex-col lg:flex-row bg-gray1-100 overflow-hidden text-left text-[1.125rem] text-neutral-10 font-days-one max-w-[1200px] mx-auto">
+    <div className="w-full min-h-screen flex flex-col lg:flex-row bg-gray1-100 overflow-hidden text-neutral-10 text-left text-[1.125rem] font-days-one max-w-full">
 
-
-      
-      {/* Left Pane */}
-      <div className="w-full lg:w-[50%] flex flex-col justify-start px-6 sm:px-10 py-6 gap-3 overflow-auto">
+    {/* Left Pane */}
+    <div className="w-full flex flex-col justify-start px-6 sm:px-10 py-6 gap-3 flex-1">
         
-        {/* Logo */}
+        
         <div className="flex items-center gap-3">
           <div className="rounded-md bg-gradient-to-br from-[#8a80ff] to-[#5c53bc] p-2">
             <Image
@@ -116,7 +114,7 @@ const Login: NextPage = () => {
       </div>
 
       {/* Right Pane with Slider */}
-      <div className="w-full lg:w-[50vw] flex items-center justify-center px-4 py-6 bg-white">
+      <div className="w-full lg:w-[50vw] hidden sm:block flex items-center justify-center px-4 py-6 bg-white">
         <Slider />
       </div>
     </div>
