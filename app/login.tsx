@@ -6,7 +6,7 @@ import { Eye, EyeClosed } from "lucide-react";
 import Slider from '../components/carousal/Slider';
 
 const Login: NextPage = () => {
-  const [showPassword, setShowPassword] = useState(false);
+  const [showPassword, setShowPassword] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -60,7 +60,7 @@ const Login: NextPage = () => {
             <label className="text-base font-medium">Password</label>
             <div className="relative flex items-center">
               <input
-                type={showPassword ? "text" : "password"}
+                type={showPassword ? "password" :"text" }
                 placeholder="Enter your password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
