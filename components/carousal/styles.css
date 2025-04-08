@@ -4,18 +4,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 50px;
+  font-size: 3.125rem; /* 50px */
   color: #fff;
   font-weight: 500;
-  height: 300px;
+  height: 18.75rem; /* 300px */
   max-height: 100vh;
 }
-slides{
+
+slides {
   display: flex;
   position: relative;
 }
+
 .number-slide1 {
-  background: rgb(64, 175, 255);
   background: linear-gradient(
     128deg,
     rgba(64, 175, 255, 1) 0%,
@@ -24,7 +25,6 @@ slides{
 }
 
 .number-slide2 {
-  background: rgb(255, 75, 64);
   background: linear-gradient(
     128deg,
     rgba(255, 154, 63, 1) 0%,
@@ -33,12 +33,6 @@ slides{
 }
 
 .number-slide3 {
-  background: rgb(182, 255, 64);
-  background: linear-gradient(
-    128deg,
-    rgba(182, 255, 64, 1) 0%,
-    rgba(63, 255, 71, 1) 100%
-  );
   background: linear-gradient(
     128deg,
     rgba(189, 255, 83, 1) 0%,
@@ -47,7 +41,6 @@ slides{
 }
 
 .number-slide4 {
-  background: rgb(64, 255, 242);
   background: linear-gradient(
     128deg,
     rgba(64, 255, 242, 1) 0%,
@@ -56,7 +49,6 @@ slides{
 }
 
 .number-slide5 {
-  background: rgb(255, 64, 156);
   background: linear-gradient(
     128deg,
     rgba(255, 64, 156, 1) 0%,
@@ -65,7 +57,6 @@ slides{
 }
 
 .number-slide6 {
-  background: rgb(64, 76, 255);
   background: linear-gradient(
     128deg,
     rgba(64, 76, 255, 1) 0%,
@@ -78,24 +69,23 @@ slides{
   display: flex;
   height: 100vh;
 }
+
 .dots {
   position: absolute;
- 
-  left: 100px;
-  
-  bottom:-132px;
-  border-radius: 50px;
+  left: 6.25rem; /* 100px */
+  bottom: -8.25rem; /* -132px */
+  border-radius: 3.125rem; /* 50px */
   justify-content: center;
-  gap: 14px; /* spacing between lines */
+  gap: 0.875rem; /* 14px */
 }
 
 .dot {
-  padding: 4px;;
- margin: 4px;
-  width: 10vw; /* width of the line */
-  height: 4px; /* height of the line */
+  padding: 0.25rem; /* 4px */
+  margin: 0.25rem; /* 4px */
+  width: 6.875rem; /* 110px */
+  height: 0.25rem; /* 4px */
   background: #dbdbdbf1;
-  border-radius: 2px;
+  border-radius: 0.125rem; /* 2px */
   cursor: pointer;
   transition: background 0.3s ease;
 }
@@ -105,12 +95,12 @@ slides{
 }
 
 .dot.active {
-  background: #6843ec; /* active line color */
+  background: #6843ec;
 }
 
 .arrow {
-  width: 30px;
-  height: 30px;
+  width: 1.875rem; /* 30px */
+  height: 1.875rem; /* 30px */
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -120,12 +110,12 @@ slides{
 }
 
 .arrow--left {
-  left: 5px;
+  left: 0.3125rem; /* 5px */
 }
 
 .arrow--right {
   left: auto;
-  right: 5px;
+  right: 0.3125rem; /* 5px */
 }
 
 .arrow--disabled {

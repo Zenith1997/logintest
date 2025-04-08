@@ -24,18 +24,16 @@ export default function App() {
   <div className="keen-slider__slide h-full">
     <Slides />
   </div>
-  <div className="keen-slider__slide number-slide3 h-full flex items-center justify-center text-4xl font-bold">
-    3
+  <div className="keen-slider__slide h-full">
+    <Slides />
   </div>
-  <div className="keen-slider__slide number-slide4 h-full flex items-center justify-center text-4xl font-bold">
-    4
+  <div className="keen-slider__slide h-full">
+    <Slides />
   </div>
-  <div className="keen-slider__slide number-slide5 h-full flex items-center justify-center text-4xl font-bold">
-    5
+  <div className="keen-slider__slide h-full">
+    <Slides />
   </div>
-  <div className="keen-slider__slide number-slide6 h-full flex items-center justify-center text-4xl font-bold">
-    6
-  </div>
+  
 </div>
  {loaded && instanceRef.current && (
         <div className="dots -translate-y-40 ">

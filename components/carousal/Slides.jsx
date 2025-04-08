@@ -3,28 +3,29 @@ import React from 'react'
 
 const Slides = () => {
   return (
-    <div className="flex-1 flex flex- items-start text-white justify-end pt-[37.437rem] px-[1rem] pb-[1.5rem] box-border relative gap-[2rem] min-w-[28.625rem] max-w-full text-[2rem] font-text-sm-normal">
-    <Image
-      className="w-full h-full absolute !m-[0] top-[0rem] right-[0rem] bottom-[0rem] left-[0rem] rounded-xl max-w-full overflow-hidden max-h-full object-cover"
-      loading="lazy"
-      width={704}
-      height={976}
-      alt=""
-      src="/image@2x.png"
-    />
-    <div className="self-stretch [backdrop-filter:blur(100px)] text-white rounded-xl bg-gray1-200 flex flex-col items-start justify-center  pl-[1.5rem] pr-[1.25rem] gap-[1.312rem] mb-65 z-[1]">
-      <h2 className="m-0 self-stretch  flex-1 relative text-inherit leading-[120%] font-normal font-[inherit]">
-        “We love the screen sharing and whiteboarding features, which have
-        improved our presentations. Room.me has become an essential tool for
-        our team, allowing us to collaborate effectively. Highly
-        recommended!”
-      </h2>
-      <div className="relative text-[1.5rem] leading-[120%] font-medium">
-        Sarah Markivoc - Project Manager
+    <div className="relative flex flex-1 flex-col h-full sm:flex-row items-end justify-end text-white px-4 sm:px-8 pb-6 pt-40 sm:pt-[37.437rem] gap-8 min-w-[18rem] max-w-full text-[1.25rem] sm:text-[2rem] font-text-sm-normal">
+      
+      <Image
+        className="absolute inset-0 w-full h-full object-contain  rounded-xl"
+        loading="lazy"
+        width={704}
+        height={976}
+        alt="Slide background"
+        src="/image@2x.png"
+      />
+      
+      <div className="relative z-10 bg-gray1-200 text-white rounded-xl backdrop-blur-xl p-6 sm:p-8 flex flex-col gap-5 max-w-4xl w-full">
+        <h2 className="text-inherit text-base sm:text-2xl font-normal leading-[1.4]">
+          “We love the screen sharing and whiteboarding features, which have
+          improved our presentations. Room.me has become an essential tool for
+          our team, allowing us to collaborate effectively. Highly recommended!”
+        </h2>
+        <div className="text-sm sm:text-xl font-medium leading-[1.4]">
+          Sarah Markivoc - Project Manager
+        </div>
       </div>
+      
     </div>
-  
-  </div>
   )
 }
 
