@@ -3,12 +3,16 @@ import type { NextPage } from "next";
 import Image from "next/image";
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import { Eye, EyeClosed, EyeOff } from "lucide-react";
 
 
 const Login: NextPage = () => {
 
 
-
+    const [showPassword, setShowPassword] = useState(false);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+      const [isLoading, setIsLoading] = useState(false);
 
   return (
     <div className="w-full relative rounded-xl bg-gray1-100 overflow-hidden flex flex-row items-start justify-start py-[1.5rem] pl-[4.5rem] pr-[1.5rem] box-border gap-[3rem] leading-[normal] tracking-[normal] text-left text-[1.125rem] text-neutral-10 font-days-one">
@@ -48,6 +52,8 @@ const Login: NextPage = () => {
                     className="w-full [border:none] [outline:none] font-text-sm-normal text-[1.25rem] bg-[transparent] flex-1 relative leading-[150%] text-neutral-60 text-left inline-block min-w-[15.625rem] p-0"
                     placeholder="Enter your email address"
                     type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   
                   />
                 </div>
@@ -60,10 +66,22 @@ const Login: NextPage = () => {
                   <input
                     className="w-[calc(100%_-_76px)] [border:none] [outline:none] font-text-sm-normal text-[1.25rem] bg-[transparent] flex-1 relative leading-[150%] text-neutral-60 text-left inline-block min-w-[18.75rem] p-0"
                     placeholder="Enter your password"
-                    type="password"
+                    type={showPassword?"password":"name"}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                     
                   />
-             
+             <button 
+    type="button" 
+    className="focus:outline-none"
+    onClick={() => setShowPassword(!showPassword)}
+  >
+{showPassword ? (
+  <EyeClosed className="w-6 h-6 cursor-pointer" alt="Hide password" />
+) : (
+  <Eye className="w-6 h-6 cursor-pointer" alt="Show password" />
+)}
+  </button>
                 </div>
               </div>
      <button 
