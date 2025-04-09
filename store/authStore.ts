@@ -9,5 +9,22 @@ type AuthState = {
 
 
 export const useAuthStore = create<AuthState>()(
-
+persist(
+    (set) => ({
+      isAuthenticated: false,
+      login: async (email, password) => {
+  
+        const isValid = email === 'test@visionexdigital.com.au' && password === 'password123';
+        if (isValid) {
+          set({ isAuthenticated: true });
+          return true;
+        }
+        return false;
+      },
+      logout: () => set({ isAuthenticated: false }),
+    }),
+    {
+      name: 'auth-storage', 
+    }
+  )
   );

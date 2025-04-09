@@ -9,8 +9,21 @@ const Login: NextPage = () => {
   const [showPassword, setShowPassword] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
+  
 
+  
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+ 
+    const success = await login(email, password);
+    setIsLoading(false);
+
+    if (success) {
+      alert("login success full")
+    } else {
+      setError('Invalid email or password');
+    }
+  };
   return (
 <div className="flex justify-center items-center min-h-screen bg-gray1-100">
   <div className="w-full h-screen max-w-[1200px] flex flex-col lg:flex-row mx-auto overflow-hidden text-neutral-10 text-left text-[1rem] font-days-one">
@@ -42,7 +55,7 @@ const Login: NextPage = () => {
         </div>
 
         {/* Form */}
-        <form className="flex flex-col gap-5">
+        <form onSubmit={handleSubmit} className="flex flex-col gap-5">
           
           {/* Email */}
           <div className="flex flex-col gap-2">
