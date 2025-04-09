@@ -12,10 +12,11 @@ const Login: NextPage = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   return (
-    <div className="w-full min-h-screen flex flex-col lg:flex-row bg-gray1-100 overflow-hidden text-neutral-10 text-left text-[1.125rem] font-days-one max-w-full">
-
+<div className="flex justify-center items-center min-h-screen bg-gray1-100">
+  <div className="w-full h-screen max-w-[1200px] flex flex-col lg:flex-row mx-auto overflow-hidden text-neutral-10 text-left text-[1rem] font-days-one">
+    
     {/* Left Pane */}
-    <div className="w-full flex flex-col justify-start px-6 sm:px-10 py-6 gap-3 flex-1">
+    <div className="w-full lg:w-1/2 flex flex-col justify-start px-6 sm:px-10 py-6 gap-4 h-full">
         
         
         <div className="flex items-center gap-3">
@@ -114,10 +115,12 @@ const Login: NextPage = () => {
       </div>
 
       {/* Right Pane with Slider */}
-      <div className="w-full lg:w-[50vw] hidden sm:block flex items-center justify-center px-4 py-6 bg-white">
+      <div className="hidden lg:flex w-full lg:w-1/2 items-center justify-center px-4 py-6 bg-black h-full">
         <Slider />
       </div>
     </div>
+    </div>
+  
   );
 };
 

@@ -13,11 +13,7 @@
   padding: 0;
 }
 
-slides {
-  display: flex;
-  position: relative;
-  justify-content: center;
-}
+
 
 .number-slide1 {
   background: linear-gradient(
@@ -76,8 +72,8 @@ slides {
 .dots {
   display:flex;
   position: absolute;
-  left: 8.25rem; /* 100px */
-  bottom: -7.25rem; /* -132px */
+  
+  bottom: -2rem; /* -132px */
   border-radius: 3.125rem; /* 50px */
   justify-content: center;
   gap: 0.001rem; /* 14px */
@@ -87,7 +83,7 @@ slides {
 .dot {
   padding: 0.25rem; /* 4px */
   margin: 0.25rem; /* 4px */
-  width: 4.875rem; /* 110px */
+  width: 7.875rem; /* 110px */
   height: 0.10rem; /* 4px */
   background: #dbdbdbf1;
   border-radius: 4.125rem; /* 2px */
