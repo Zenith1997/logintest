@@ -4,13 +4,15 @@ import Image from "next/image";
 import { useState } from 'react';
 import { Eye, EyeClosed } from "lucide-react";
 import Slider from '../components/carousal/Slider';
+import { useAuthStore } from '../store/authStore';
 
 const Login: NextPage = () => {
   const [showPassword, setShowPassword] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  
-
+  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const login = useAuthStore((state) => state.login);
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
