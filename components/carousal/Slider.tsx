@@ -1,6 +1,6 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import "./styles.css"
-import { useKeenSlider } from "keen-slider/react"
+import { useKeenSlider,KeenSliderInstance} from "keen-slider/react"
 import "keen-slider/keen-slider.min.css"
 import Slides from './Slides';
 
@@ -16,6 +16,17 @@ export default function App() {
       setLoaded(true)
     },
   })
+
+  useEffect(() => {
+    if (instanceRef.current) {
+      const interval = setInterval(() => {
+        const nextSlide = (currentSlide + 1) % instanceRef.current.track.details.slides.length;
+        instanceRef.current.moveToIdx(nextSlide);
+      }, 2000); // Auto slide every 3 seconds
+
+      return () => clearInterval(interval); // Cleanup interval on unmount
+    }
+  }, [currentSlide, instanceRef]);
 
   return (
     <>
