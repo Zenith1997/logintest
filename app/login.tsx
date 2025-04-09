@@ -45,7 +45,7 @@ const Login: NextPage = () => {
     if (success) {
     
      router.push('dashboard')
-     toast.success("Login successful!")
+     toast.success("Welcome, you’re logged in.")
     } else {
       setError('Invalid email or password');
     }
@@ -75,7 +75,7 @@ const Login: NextPage = () => {
           <h1 className="text-xl sm:text-2xl font-semibold">
             Welcome back to Room.me!
           </h1>
-          <p className="text-sm sm:text-base text-neutral-500">
+          <p className="text-sm sm:text-base text-neutral-50">
             Room.me is an innovative video conference product that revolutionizes virtual meetings.
           </p>
         </div>
@@ -91,10 +91,11 @@ const Login: NextPage = () => {
             <label className="text-base font-medium">Email address</label>
             <input
               type="email"
-              placeholder="Enter your email"
+              placeholder="Enter your email address"
               value={email}
+              autoComplete="off"
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full rounded-md border border-neutral-300 px-4 py-2 text-sm text-neutral-800 bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                   className="w-full rounded-md border border-gray-800  px-4 py-3 text-sm text-neutral-500 bg-gray-950 focus:outline-none focus:ring-2 focus:ring-indigo-400"
             />
           </div>
 
@@ -107,7 +108,7 @@ const Login: NextPage = () => {
                 placeholder="Enter your password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="w-full rounded-md border border-neutral-300 px-4 py-2 pr-10 text-sm text-neutral-800 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                       className="w-full rounded-md border border-gray-800  px-4 py-3 text-sm text-neutral-500 bg-gray-950 focus:outline-none focus:ring-2 focus:ring-indigo-400"
               />
               <button
                 type="button"
@@ -147,7 +148,7 @@ const Login: NextPage = () => {
               <input type="checkbox" />
               Remember for 30 days
             </label>
-            <button className="underline text-cornflowerblue">Forgot password?</button>
+            <button className="underline text-purple-500">Forgot password?</button>
           </div>
 
           {/* Footer */}

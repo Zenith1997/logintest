@@ -81,10 +81,10 @@
 }
 
 .dot {
-  padding: 0.25rem; /* 4px */
+  padding: 0.20rem; /* 4px */
   margin: 0.25rem; /* 4px */
   width: 5.875rem; /* 110px */
-  height: 0.10rem; /* 4px */
+  height: 0.08rem; /* 4px */
   background: #dbdbdbf1;
   border-radius: 4.125rem; /* 2px */
   cursor: pointer;

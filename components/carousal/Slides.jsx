@@ -16,7 +16,7 @@ const Slides = () => {
       />
       
      {/* Testimonial Content */}
-     <div className="absolute bottom-6 md:bottom-[11%] lg:bottom-[18%]  left-1/2 transform -translate-x-1/2 z-10 bg-gray1-200 text-white rounded-xl backdrop-blur-xl p-4 sm:p-6 w-[90%] md:w-[70%] lg:w-[30vw] text-sm sm:text-base text-center">
+     <div className="absolute bottom-6 md:bottom-[11%] lg:bottom-[18%]  left-1/2 transform -translate-x-1/2 z-10 bg-gray1-200 text-white rounded-xl backdrop-blur-xl p-3 sm:p-6 w-[90%] md:w-[70%] lg:w-[30vw] text-sm sm:text-xl font-medium leading-[6] text-left">
     <h2 className="font-normal leading-relaxed">
 
           “We love the screen sharing and whiteboarding features, which have
