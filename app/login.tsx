@@ -6,7 +6,15 @@ import { Eye, EyeClosed } from "lucide-react";
 import Slider from '../components/carousal/Slider';
 import { useAuthStore } from '../store/authStore';
 import Spinner from "@/components/Spinner";
+import { useRouter } from 'next/navigation';
+
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
+
 const Login: NextPage = () => {
+
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -27,7 +35,7 @@ const Login: NextPage = () => {
     }
     
     setIsLoading(true)
-    await new Promise((resolve) => setTimeout(resolve, 4000));
+    await new Promise((resolve) => setTimeout(resolve, 2500));
     
     const success = await login(email, password);
     setIsLoading(false);
@@ -35,7 +43,9 @@ const Login: NextPage = () => {
 
 
     if (success) {
-      alert("login success full")
+    
+     router.push('dashboard')
+     toast.success("Login successful!")
     } else {
       setError('Invalid email or password');
     }
@@ -72,7 +82,10 @@ const Login: NextPage = () => {
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="flex flex-col gap-5">
-          
+        {error && (
+                <div className="text-red-500 text-sm self-stretch text-center">
+                  {error}
+                </div>)}
           {/* Email */}
           <div className="flex flex-col gap-2">
             <label className="text-base font-medium">Email address</label>
