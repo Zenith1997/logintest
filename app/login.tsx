@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Eye, EyeClosed } from "lucide-react";
 import Slider from '../components/carousal/Slider';
 import { useAuthStore } from '../store/authStore';
-
+import Spinner from "@/components/Spinner";
 const Login: NextPage = () => {
   const [showPassword, setShowPassword] = useState(true);
   const [email, setEmail] = useState('');
@@ -16,9 +16,23 @@ const Login: NextPage = () => {
   
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
- 
+    if (!email || !password) {
+      setError('Both email and password are required');
+      return;
+    }
+    
+    if (!email.includes('@') || !email.includes('.')) {
+      setError('Please enter a valid email address');
+      return;
+    }
+    
+    setIsLoading(true)
+    await new Promise((resolve) => setTimeout(resolve, 4000));
+    
     const success = await login(email, password);
     setIsLoading(false);
+   
+
 
     if (success) {
       alert("login success full")
@@ -96,10 +110,14 @@ const Login: NextPage = () => {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full py-3 rounded-md bg-gradient-to-br from-[#8a80ff] to-[#5c53bc] text-white font-semibold hover:opacity-90 transition"
+            className="w-full flex justify-center py-3 rounded-md  gap-4 bg-gradient-to-br from-[#8a80ff] to-[#5c53bc] text-white font-semibold hover:opacity-90 transition"
           >
-            {isLoading ? "Signing in..." : "Sign in"}
+
+{isLoading&&<Spinner/> }
+            {isLoading ?"Signing in ..": "Sign in"}
+         
           </button>
+        
 
           {/* Google Login */}
           <button
