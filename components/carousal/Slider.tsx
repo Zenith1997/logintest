@@ -47,7 +47,11 @@ export default function App() {
 
 
   {loaded && instanceRef.current && (
-        <div className="dots -translate-y-40  ">
+        <div className="dots sm:-translate-y-40 md:-translate-y-40 lg:-translate-y-20 xl:-translate-y-40">
+
+
+
+
           {[
             ...Array(instanceRef.current.track.details.slides.length).keys(),
           ].map((idx) => {
